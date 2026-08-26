@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Document </title>
+        <style>
+            body {
+                font-family: system-ui, sans-serif;
+                text-align: center;
+                margin-top: 40px;
+                color: #333;
+            }
+            h1 {
+                color: #007BFF;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="judul">Halooo</h1>
+        <p>Buka console untuk melihat pesan tambahan dari JavaScript</p>
+
+        <script>
+            //1. function declaration - bisa dipanggil sebelum didefinisikan (hoisting)
+            function sapa(nama) {
+                return `Halo, ${nama}!`;
+            }
+
+            //2. function expression - disimpan dalam variabel, tidak bisa dipanggil sebelum didefinisikan
+            const kalikan = function(a, b) {
+                return a * b;
+            };
+
+            //3. arrow function - sintaks lebih ringkas, populer pada kode modern
+            const tambah = (a, b) => a + b;
+
+            console.log(sapa("Andi"));
+            console.log(kalikan(3, 4));
+            console.log(tambah(5, 7));
+        </script>
+    </body>

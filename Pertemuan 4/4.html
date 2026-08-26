@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style>
+            body {
+                font-family: system-ui, sans-serif;
+                text-align: center;
+                margin-top: 40px;
+                color: #333;
+            }
+            h1 {
+                color: #007BFF;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="judul">Halooo</h1>
+        <p>Buka console untuk melihat pesan tambahan dari JavaScript</p>
+
+        <script>
+            // for: mencetak angka 1 sampai 5
+for (let i = 1; i <= 5; i++) {
+console.log(`Perulangan ke-${i}`);
+}
+// while: menghitung mundur
+let sisa = 3;
+while (sisa > 0) {
+console.log(`Hitung mundur: ${sisa}`);
+sisa--;
+}
+// for...of: mengulang isi array
+const buah = ["apel", "jeruk", "mangga"];
+for (const item of buah) {
+console.log(`Buah: ${item}`);
+}
+        </script>
+    </body>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        const harga = 150000;
+const diskonPersen = 20;
+const potongan = harga * (diskonPersen / 100);
+const hargaAkhir = harga - potongan;
+console.log(`Harga awal: Rp${harga}`);
+console.log(`Diskon ${diskonPersen}% == Rp${potongan}`);
+console.log(`Harga_akhir: Rp${hargaAkhir}`);
+const status = hargaAkhir < 100000 ? "Murah" : "Mahal";
+console.log(`Status: ${status}`);
+        </script>
+    </body>
+</html> 
