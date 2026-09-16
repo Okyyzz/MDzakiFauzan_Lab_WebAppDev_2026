@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TokoLab — Praktikum Web</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <h1>TokoLab</h1>
+      <p>Praktikum Web — Digital Business Technology</p>
+    </div>
+    <button class="guide-btn" onclick="toggleGuide()">Tampilkan panduan</button>
+  </header>
+
+  <div id="brief" class="brief" style="display:none;">
+    Ini contoh hasil akhir katalog + keranjang belanja sederhana. Cari atau filter produk di kiri,
+    tambahkan ke keranjang di kanan, pakai kode voucher <strong>DISKON10</strong> untuk diskon 10%,
+    lalu klik Checkout.
+  </div>
+
+  <div class="layout">
+    <section class="catalog">
+      <h2>KATALOG PRODUK</h2>
+      <div class="controls">
+        <input type="search" id="search" placeholder="Cari nama produk...">
+        <select id="category"></select>
+        <select id="sort">
+          <option value="default">Urutkan: Default</option>
+          <option value="price-asc">Harga: Terendah</option>
+          <option value="price-desc">Harga: Tertinggi</option>
+          <option value="name-asc">Nama: A-Z</option>
+        </select>
+      </div>
+      <div class="result-count" id="resultCount"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <aside class="cart">
+      <h2>KERANJANG</h2>
+      <div id="cartItems"></div>
+
+      <div class="ship-note" id="shipNote"></div>
+      <div class="ship-bar"><div class="ship-fill" id="shipFill"></div></div>
+
+      <div class="voucher-row">
+        <input type="text" id="voucherInput" placeholder="Kode voucher">
+        <button onclick="applyVoucher()">Pakai</button>
+      </div>
+      <div class="voucher-msg" id="voucherMsg"></div>
+
+      <div class="totals">
+        <div><span>Subtotal</span><span id="subtotal">Rp0</span></div>
+        <div><span>Diskon</span><span id="discount">-Rp0</span></div>
+        <div><span>Ongkir</span><span id="shipping">Gratis</span></div>
+        <div class="grand"><span>Total</span><span id="total">Rp0</span></div>
+      </div>
+
+      <button class="checkout-btn" id="checkoutBtn" onclick="checkout()" disabled>Checkout</button>
+      <div class="success" id="successMsg"></div>
+    </aside>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
